@@ -1,0 +1,125 @@
+Part1
+cd ~/Desktop/
+mkdir -p finalexam
+cd finalexam/
+touch commands.txt
+cd ~/Documents/
+mkdir -p Part1
+ mv ~/Desktop/finalexam/ ~/Documents/Part1/
+cp -r ~/Documents/Part1/ ~/Desktop/Part1
+mv ~/Desktop/Part1/ ~/Desktop/Current
+cd ~/Desktop/Current/
+mkdir -p htdocs
+cd htdocs/
+touch index.html
+nano index.html 
+cat index.html 
+mkdir -p scripts
+cd scripts
+mkdir -p css
+mkdir -p js
+cd css/
+touch style.css
+cd js
+touch myjs.js
+curl https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js >> jq.js
+cd ..
+ mkdir -p img
+cd img/
+curl https://www.w3schools.com/css/css_image_gallery.asp | grep 'img src' >> img.txt
+cd ..
+cat index.html | tail -n 2 >> bottom.html
+cat index.html | head -n 3 >> head.html
+cd ..
+find . -type f -name '*.html' >> ~/Desktop/Current/htdocs/find.txt
+commads_for_test
+cd ~/Documents/
+rm -rf Part1/
+cp -r ~/Desktop/Current/ ~/Documents/Part1New
+cd ~/Desktop/Current/
+rm -rf finalexam/
+rm -rf htdocs
+
+Part2
+git clone https://github.com/banerjeeupasana03/MDIA2526Exam.git
+https://github.com/banerjeeupasana03/MDIA2526Exam
+cd MDIA2526Exam/
+cp -r ~/Documents/Part1New/htdocs/find.txt .
+cp -r ~/Documents/Part1New/htdocs/*.html .
+cp -r ~/Documents/Part1New/htdocs/scripts/js/myjs.js  .
+ git status
+git add .
+git commit -m "added files from htdocs"
+git push origin master
+nano index.html 
+git add .
+git commit -m "added few lines in index.html"
+git push origin master
+ls -lah
+   67  git status
+   68  git add .
+   69  git status
+   70  git commit -m "added files from htdocs"
+   71  git status
+   72  git push origin master
+   73  git status
+   74  nano index.html 
+   75  git status
+   76  git add .
+   77  git status
+   78  git commit -m "added few lines in index.html"
+   79  git status
+   80  git push origin master
+   81  cp -r ~/Documents/Part1New/htdocs/scripts/js/myjs.js  .
+   82  nano myjs.js 
+   83  cp -r ~/Documents/Part1New/htdocs/scripts/js/jq.js  .
+   84  cp -r ~/Documents/Part1New/htdocs/scripts/css/style.css  .
+   85  cp -r ~/Documents/Part1New/htdocs/scripts/img/img.txt  .
+   86  git status
+   87  git add .
+   88  git status
+   89  cp -r ~/Documents/Part1New/htdocs/img/img.txt  .
+   90  git status
+   91  git add .
+   92  git status
+   93  git commit -m "added files"
+   94  git push origin master
+   95  git status
+git push origin master
+   95  git status
+   96  history
+   97  git tag examv1
+   98  git status
+   99  git push origin examv1
+  100  git checkout master
+  101  git checkout -b cssFeature
+  102  git checkout cssFeature
+  103  nano index.html 
+  104  git status
+  105  git add .
+  106  git status
+  107  git commit -m "added link in html file"
+  108  git status
+  109  git push origin cssFeature
+  110  nano style.css 
+  111  git status
+  112  git add .
+  113  git status
+  114  git commit -m "aded new css data"
+  115  git push origin cssFeature
+  116  git status
+  117  git checkout master
+  118  git pull
+  119  git merge --no-edit cssFeature
+  120  git status
+  121  git add .
+  122  git push origin master
+  123  git status
+  124  git tag examv2
+  125  git push origin examv2
+  126  cp -r ~/Desktop/Current/ ~/Documents/Part2Git
+  127  history
+
+
+
+
